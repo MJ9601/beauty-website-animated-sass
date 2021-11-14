@@ -1,3 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Handlee&family=Lora:ital,wght@0,400;0,500;1,500;1,600&family=Patrick+Hand&family=Playball&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-transform: none;
+  overflow-x: hidden;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+  font-style: normal; }
 
+html {
+  padding: 0;
+  font-size: 62.5%; }
+
+body {
+  width: 100%;
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+  overflow-x: hidden; }
+
+h1, h2, h3, h4 {
+  font-family: "courgette"; }
+
+section, nav {
+  width: 100%; }
+
+a {
+  color: #e6e6e6;
+  cursor: pointer; }
+
+#home {
+  background-image: url("../images/back-1.jpg");
+  width: 100%;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+  #home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    opacity: 0.4; }
+  #home .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #home .container .hero-wrapper {
+      margin: auto;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      justify-content: center;
+      align-items: center; }
+      #home .container .hero-wrapper .hero-header {
+        font-size: 5rem;
+        text-align: center;
+        font-family: "Lora";
+        font-style: italic;
+        font-weight: 600;
+        padding: 1rem 0;
+        margin-bottom: 0.5rem; }
+      #home .container .hero-wrapper .hero-text {
+        width: 75%;
+        text-align: center;
+        font-size: 2rem;
+        font-family: sans-serif;
+        margin-bottom: 2rem; }
+
+.brand {
+  padding: 3rem 0;
+  position: relative; }
+  .brand .container .brand-wrapper {
+    padding: 2rem 0; }
+    .brand .container .brand-wrapper .img-wrapper {
+      width: 20rem;
+      height: 10rem; }
+      .brand .container .brand-wrapper .img-wrapper .img-brand {
+        width: 100%;
+        max-height: 95%;
+        object-fit: contain;
+        border-radius: 0.3rem; }
+  .brand::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background: linear-gradient(to left, transparent, #fff, transparent); }
+
+#beauty {
+  margin: 1rem 0;
+  padding: 2rem 0;
+  position: relative; }
+  #beauty .container .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    #beauty .container .content-wrapper .left-col, #beauty .container .content-wrapper .right-col {
+      width: 48%; }
+    #beauty .container .content-wrapper .left-col h1 {
+      text-align: right;
+      font-size: 2.3rem;
+      font-family: sans-serif;
+      text-transform: uppercase; }
+    #beauty .container .content-wrapper .right-col h1 {
+      text-align: left;
+      font-size: 2.3rem;
+      font-family: "Lora";
+      font-style: italic; }
+  #beauty::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background: linear-gradient(to left, transparent, #fff, transparent); }
+  #beauty::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background: linear-gradient(to left, transparent, #fff, transparent); }
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 2rem; }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 1rem;
+  background-color: transparent;
+  z-index: 1000; }
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .navbar .container .right-menu, .navbar .container .left-menu {
+      padding: 0 0.5rem; }
+      .navbar .container .right-menu .nav-group, .navbar .container .left-menu .nav-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .navbar .container .right-menu .nav-group .nav-item, .navbar .container .left-menu .nav-group .nav-item {
+          font-size: 2.2rem;
+          padding: 0 2rem;
+          margin: 0 0.5rem; }
+          .navbar .container .right-menu .nav-group .nav-item .nav-link, .navbar .container .left-menu .nav-group .nav-item .nav-link {
+            text-transform: uppercase;
+            font-family: "Abril Fatface";
+            position: relative;
+            overflow-x: hidden; }
+            .navbar .container .right-menu .nav-group .nav-item .nav-link::before, .navbar .container .left-menu .nav-group .nav-item .nav-link::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 0;
+              bottom: 0;
+              border-bottom: 0.1rem solid #e6e6e6;
+              -webkit-transition: all 0.4s ease;
+              -moz-transition: all 0.4s ease;
+              -o-transition: all 0.4s ease;
+              transition: all 0.4s ease; }
+            .navbar .container .right-menu .nav-group .nav-item .nav-link:hover::before, .navbar .container .left-menu .nav-group .nav-item .nav-link:hover::before {
+              width: 100%; }
+    .navbar .container .logo-wrapper .logo {
+      font-size: 3rem;
+      font-family: "Handlee";
+      text-transform: uppercase;
+      letter-spacing: 0.1rem; }
+
+.btn {
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  color: #333;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 2rem;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .btn:hover {
+    opacity: 0.3;
+    color: #000; }
+
+.swiper {
+  width: 100%;
+  height: 100%; }
+  .swiper .swiper-slide {
+    text-align: center;
+    background: transparent;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center; }
+    .swiper .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain; }
+
+@media (max-width: 1450px) {
+  html {
+    font-size: 50%; } }
+@media (max-width: 1178px) {
+  .navbar .right-menu, .navbar .left-menu {
+    display: none; } }
+@media (max-width: 633px) {
+  #home .container {
+    width: 100%;
+    padding: 0 3rem; }
+    #home .container .hero-wrapper {
+      width: 100%;
+      margin: 0; }
+      #home .container .hero-wrapper .hero-header, #home .container .hero-wrapper .hero-text {
+        width: 95%; }
+
+  #beauty .container .content-wrapper .left-col, #beauty .container .content-wrapper .right-col {
+    width: 90%;
+    margin-bottom: 2rem;
+    padding: 2rem 0; }
+    #beauty .container .content-wrapper .left-col h1, #beauty .container .content-wrapper .right-col h1 {
+      text-align: left; } }
 
 /*# sourceMappingURL=styles.css.map */

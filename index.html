@@ -1,16 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="static/css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-  <title>beauty website</title>
-</head>
-<body>
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="static/css/styles.css" />
+    <title>beauty website</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="left-menu">
+          <ul class="nav-group">
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item">
+              <a href="#beauty" class="nav-link">our beauty</a>
+            </li>
+            <li class="nav-item">
+              <a href="#products" class="nav-link">products</a>
+            </li>
+          </ul>
+        </div>
+        <div class="logo-wrapper">
+          <h1 class="logo">nice beauty</h1>
+        </div>
+        <div class="right-menu">
+          <ul class="nav-group">
+            <li class="nav-item">
+              <a href="#story" class="nav-link">Our Story</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="#account" class="nav-link">account</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-  <script src="static/js/script.js"></script>
-</body>
+    <section id="home">
+      <div class="container">
+        <div class="hero-wrapper">
+          <h1 class="hero-header">Nice beauty is not compromise your beauty</h1>
+          <p class="hero-text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam,
+            nihil. Lorem, ipsum dolor.
+          </p>
+          <button class="btn">learn more</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="brand">
+      <div class="container">
+        <div class="swiper mySwiper">
+          <div class="brand-wrapper swiper-wrapper">
+            <div class="img-wrapper swiper-slide">
+              <img src="static/images/logo/2.png" alt="" class="img-brand" />
+            </div>
+            <div class="img-wrapper swiper-slide">
+              <img src="static/images/logo/3.png" alt="" class="img-brand" />
+            </div>
+            <div class="img-wrapper swiper-slide">
+              <img src="static/images/logo/4.png" alt="" class="img-brand" />
+            </div>
+            <div class="img-wrapper swiper-slide">
+              <img src="static/images/logo/5.png" alt="" class="img-brand" />
+            </div>
+            <div class="img-wrapper swiper-slide">
+              <img src="static/images/logo/6.png" alt="" class="img-brand" />
+            </div>
+            <div class="img-wrapper swiper-slide">
+              <img src="static/images/logo/7.png" alt="" class="img-brand" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="beauty">
+      <div class="container">
+        <div class="content-wrapper">
+          <div class="left-col">
+            <h1>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consectetur eum reiciendis perferendis suscipit, quidem voluptas
+              aliquid in minima deleniti recusandae, ipsa sint voluptates
+              repudiandae rerum. Corporis veritatis accusamus dolorum aliquid
+              explicabo harum facere et. Iure.
+            </h1>
+          </div>
+          <div class="right-col">
+            <h1>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
+              repudiandae minus repellendus necessitatibus a est laboriosam,
+              enim nam temporibus. Dolorem fugit, possimus rem iste consectetur
+              adipisci quaerat. Placeat, fuga laudantium fugit numquam ut quasi.
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="container">
+        <div class="content-wrapper">
+          <img src="static/images/pic-2.jpg" alt="" class="img-product" />
+          <div class="content">
+            <h1 class="content-title">Lorem ipsum dolor sit.</h1>
+            <div class="content-body">
+              <p class="content-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                magnam labore veritatis dolore accusamus deleniti eius sunt amet
+                facilis nihil. Est quam eaque quidem reprehenderit ipsam?
+              </p>
+              <button class="btn">learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 9,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <script src="static/js/script.js"></script>
+  </body>
 </html>

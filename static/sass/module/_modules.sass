@@ -1,0 +1,99 @@
+//
+.container
+  width: 85%
+  margin: 0 auto
+  padding: 2rem
+
+.navbar
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  padding: 2rem 1rem
+  background-color: transparent
+  z-index: 1000
+  .container  
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .right-menu, .left-menu
+      padding: 0 .5rem
+      .nav-group
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .nav-item
+          font-size: 2.2rem
+          padding: 0 2rem
+          margin: 0 .5rem
+          .nav-link
+            text-transform: uppercase
+            font-family: $headerFont
+            position: relative
+            overflow-x: hidden
+            &::before
+              content: ""
+              position: absolute
+              top: 0
+              left: 0
+              width: 0
+              bottom: 0
+              border-bottom: .1rem solid $light
+              +customeTransition(all .4s ease)
+            &:hover
+              &::before
+                width: 100%
+
+    .logo-wrapper
+      .logo
+        font-size: 3rem
+        font-family: $logoFont
+        text-transform: uppercase
+        letter-spacing: .1rem
+
+.btn
+  padding: 1rem 3rem
+  font-size: 2rem
+  color: $gray
+  text-transform: uppercase
+  cursor: pointer
+  margin: 2rem
+  +customeTransition(all .3s ease )
+  &:hover
+    opacity: .3
+    color: #000 
+
+
+
+.swiper 
+  width: 100%
+  height: 100%
+  .swiper-slide 
+    text-align: center
+    // font-size: 18px
+    background: transparent
+
+    /* Center slide text vertically */
+    display: -webkit-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    -webkit-justify-content: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    -webkit-align-items: center
+    align-items: center
+    img 
+      display: block
+      width: 100%
+      height: 100%
+      object-fit: contain
+  
+
+
+
+          
+
