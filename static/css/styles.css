@@ -4,15 +4,16 @@
   margin: 0;
   list-style: none;
   text-transform: none;
-  overflow-x: hidden;
   text-decoration: none;
   box-sizing: border-box;
   outline: none;
-  font-style: normal; }
+  font-style: normal;
+  scroll-behavior: smooth; }
 
 html {
   padding: 0;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  overflow-x: hidden; }
 
 body {
   width: 100%;
@@ -29,6 +30,10 @@ section, nav {
 a {
   color: #e6e6e6;
   cursor: pointer; }
+
+footer {
+  width: 100%;
+  padding: 2rem; }
 
 #home {
   background-image: url("../images/back-1.jpg");
@@ -81,14 +86,6 @@ a {
   position: relative; }
   .brand .container .brand-wrapper {
     padding: 2rem 0; }
-    .brand .container .brand-wrapper .img-wrapper {
-      width: 20rem;
-      height: 10rem; }
-      .brand .container .brand-wrapper .img-wrapper .img-brand {
-        width: 100%;
-        max-height: 95%;
-        object-fit: contain;
-        border-radius: 0.3rem; }
   .brand::before {
     content: "";
     position: absolute;
@@ -135,6 +132,166 @@ a {
     height: 0.1rem;
     background: linear-gradient(to left, transparent, #fff, transparent); }
 
+#products .container .content-wrapper.left, #products .container .content-wrapper.right {
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh; }
+  #products .container .content-wrapper.left .img-product, #products .container .content-wrapper.right .img-product {
+    width: 50%;
+    height: inherit;
+    padding: 2rem;
+    object-fit: cover; }
+  #products .container .content-wrapper.left .content, #products .container .content-wrapper.right .content {
+    position: relative;
+    width: 47%; }
+    #products .container .content-wrapper.left .content .content-title, #products .container .content-wrapper.right .content .content-title {
+      color: #fff;
+      z-index: 100;
+      position: absolute;
+      top: -15rem;
+      left: -25%;
+      font-size: 4rem;
+      font-family: "Lora";
+      font-style: italic;
+      text-transform: uppercase; }
+    #products .container .content-wrapper.left .content .content-body, #products .container .content-wrapper.right .content .content-body {
+      padding: 2rem 0;
+      margin-left: 2rem; }
+      #products .container .content-wrapper.left .content .content-body::before, #products .container .content-wrapper.right .content .content-body::before {
+        content: "";
+        position: absolute;
+        top: 1rem;
+        left: -1rem;
+        width: 0.1rem;
+        height: 100%;
+        background: linear-gradient(to top, transparent, #fff); }
+      #products .container .content-wrapper.left .content .content-body .content-text, #products .container .content-wrapper.right .content .content-body .content-text {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        text-align: start;
+        width: 85%; }
+      #products .container .content-wrapper.left .content .content-body .btn, #products .container .content-wrapper.right .content .content-body .btn {
+        margin-left: 0;
+        margin-top: 3rem; }
+  #products .container .content-wrapper.left.right .content .content-title, #products .container .content-wrapper.right.right .content .content-title {
+    position: absolute;
+    top: -15rem;
+    right: -25%;
+    padding-left: 3rem;
+    text-align: right; }
+  #products .container .content-wrapper.left.right .content .content-body, #products .container .content-wrapper.right.right .content .content-body {
+    text-align: end; }
+    #products .container .content-wrapper.left.right .content .content-body::before, #products .container .content-wrapper.right.right .content .content-body::before {
+      background: none; }
+    #products .container .content-wrapper.left.right .content .content-body::after, #products .container .content-wrapper.right.right .content .content-body::after {
+      content: "";
+      position: absolute;
+      top: 1rem;
+      right: 0;
+      width: 0.1rem;
+      height: 100%;
+      background: linear-gradient(to top, transparent, #fff); }
+    #products .container .content-wrapper.left.right .content .content-body .content-text, #products .container .content-wrapper.right.right .content .content-body .content-text {
+      text-align: end;
+      position: relative;
+      margin-right: 0;
+      right: -5rem;
+      padding-right: 0; }
+    #products .container .content-wrapper.left.right .content .content-body .btn, #products .container .content-wrapper.right.right .content .content-body .btn {
+      margin-right: 3rem; }
+
+#gallery .container .head-line {
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 3rem 0;
+  font-family: "Abril Fatface"; }
+#gallery .container .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center; }
+  #gallery .container .wrapper .img-wrapper {
+    width: 25rem;
+    height: 30rem;
+    border: 0.2rem solid #e6e6e6;
+    margin: 1rem;
+    position: relative; }
+    #gallery .container .wrapper .img-wrapper .img-gal {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      opacity: 0;
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out; }
+      #gallery .container .wrapper .img-wrapper .img-gal:hover {
+        opacity: 0.9; }
+    #gallery .container .wrapper .img-wrapper .text {
+      position: absolute;
+      top: 45%;
+      left: 8%;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 3rem;
+      text-transform: uppercase; }
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .footer .container .copy-right {
+    padding: 1rem 0; }
+  .footer .container .wrapper {
+    width: 100%;
+    padding: 5rem 0;
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: start;
+    position: relative; }
+    .footer .container .wrapper::before {
+      content: "";
+      position: absolute;
+      top: 1rem;
+      right: 0;
+      width: 100%;
+      height: 0.1rem;
+      background: linear-gradient(to left, transparent, #fff, transparent); }
+    .footer .container .wrapper::after {
+      content: "";
+      position: absolute;
+      bottom: 1rem;
+      right: 0;
+      width: 100%;
+      height: 0.1rem;
+      background: linear-gradient(to left, transparent, #fff, transparent); }
+    .footer .container .wrapper .brand-wrapper {
+      width: 35%; }
+      .footer .container .wrapper .brand-wrapper .brand-logo {
+        font-size: 2.6rem;
+        font-family: "Handlee";
+        text-transform: uppercase;
+        margin-bottom: 2rem; }
+      .footer .container .wrapper .brand-wrapper .lead {
+        font-size: 2rem;
+        line-height: 2.4rem; }
+    .footer .container .wrapper .link-wrapper .footer-group .footer-item {
+      font-size: 2rem;
+      margin-bottom: 1.8rem;
+      cursor: pointer;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      .footer .container .wrapper .link-wrapper .footer-group .footer-item:hover {
+        opacity: 0.5; }
+
 .container {
   width: 85%;
   margin: 0 auto;
@@ -147,11 +304,20 @@ a {
   width: 100%;
   padding: 2rem 1rem;
   background-color: transparent;
-  z-index: 1000; }
+  z-index: 1000;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+  .navbar.active {
+    background: rgba(26, 26, 26, 0.5); }
   .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    .navbar .container .collapse-key, .navbar .container .collapse-nav {
+      display: none;
+      opacity: 0; }
     .navbar .container .right-menu, .navbar .container .left-menu {
       padding: 0 0.5rem; }
       .navbar .container .right-menu .nav-group, .navbar .container .left-menu .nav-group {
@@ -190,6 +356,7 @@ a {
 .btn {
   padding: 1rem 3rem;
   font-size: 2rem;
+  font-weight: 400;
   color: #333;
   text-transform: uppercase;
   cursor: pointer;
@@ -223,17 +390,120 @@ a {
     align-items: center; }
     .swiper .swiper-slide img {
       display: block;
-      width: 100%;
-      height: 100%;
+      width: 20rem;
+      height: 10rem;
       object-fit: contain; }
+
+#story {
+  margin: 2rem 0; }
+  #story .container .title {
+    font-family: "Abril Fatface";
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 2rem 0 3rem 0; }
+  #story .container .swiper {
+    position: relative;
+    overflow-y: visible; }
+    #story .container .swiper .swiper-wrapper .swiper-slide img {
+      width: 40rem;
+      height: 60rem;
+      object-fit: cover; }
+    #story .container .swiper .navigation {
+      overflow-y: visible;
+      width: 10%;
+      position: absolute;
+      top: 3rem;
+      right: 0;
+      display: flex;
+      justify-content: end; }
+      #story .container .swiper .navigation .swiper-button-next, #story .container .swiper .navigation .swiper-button-prev {
+        overflow-y: visible;
+        z-index: 999;
+        background-color: #fff;
+        padding: 3rem 2.4rem;
+        color: #1a1a1a;
+        font-size: 3rem;
+        font-weight: 600;
+        border-radius: 0.4rem;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease; }
+        #story .container .swiper .navigation .swiper-button-next:hover, #story .container .swiper .navigation .swiper-button-prev:hover {
+          background-color: #1a1a1a;
+          opacity: 0.5;
+          color: #fff; }
 
 @media (max-width: 1450px) {
   html {
     font-size: 50%; } }
 @media (max-width: 1178px) {
+  .navbar.collapsed {
+    background: rgba(26, 26, 26, 0.5); }
   .navbar .right-menu, .navbar .left-menu {
-    display: none; } }
-@media (max-width: 633px) {
+    display: none;
+    position: relative; }
+  .navbar .container .collapse-key {
+    display: block;
+    opacity: 1;
+    font-size: 3rem;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .navbar .container .collapse-key:hover {
+      color: #ff3333; }
+  .navbar .container .collapse-nav {
+    position: absolute;
+    display: block;
+    top: -100vh;
+    left: 0;
+    width: 100vw;
+    height: inherit;
+    opacity: 1;
+    font-size: 3rem;
+    margin-top: 6rem;
+    background: rgba(26, 26, 26, 0.5);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    .navbar .container .collapse-nav.active {
+      display: block;
+      opacity: 1;
+      top: 6rem; }
+    .navbar .container .collapse-nav .nav-group {
+      width: 85%;
+      margin: 0 auto;
+      padding: 2rem 3rem; }
+      .navbar .container .collapse-nav .nav-group .nav-item {
+        margin-bottom: 1rem; }
+        .navbar .container .collapse-nav .nav-group .nav-item .nav-link {
+          text-transform: uppercase;
+          font-family: "Abril Fatface"; }
+
+  #products .container .content-wrapper.left .content .content-title, #products .container .content-wrapper.right .content .content-title {
+    font-size: 3rem;
+    top: -10rem; }
+
+  #story .container .swiper .navigation {
+    width: 13%; } }
+@media (max-width: 950px) {
+  #story .container .swiper .navigation {
+    width: 15%; } }
+@media (max-width: 888px) {
+  #products .container .content-wrapper.right .content .content-title, #products .container .content-wrapper.left .content .content-title {
+    font-size: 2.5rem;
+    top: -10rem; }
+  #products .container .content-wrapper.right .content .content-body {
+    padding-right: 3rem;
+    right: 2rem;
+    margin-right: 2rem; }
+
+  #story .container .swiper .navigation {
+    width: 20%; } }
+@media (max-width: 653px) {
   #home .container {
     width: 100%;
     padding: 0 3rem; }
@@ -248,6 +518,50 @@ a {
     margin-bottom: 2rem;
     padding: 2rem 0; }
     #beauty .container .content-wrapper .left-col h1, #beauty .container .content-wrapper .right-col h1 {
-      text-align: left; } }
+      text-align: left; }
+
+  #products .container .content-wrapper.right .img-product, #products .container .content-wrapper.left .img-product {
+    width: 100%;
+    margin-bottom: 2rem; }
+  #products .container .content-wrapper.right .content, #products .container .content-wrapper.left .content {
+    margin: 2rem 0;
+    width: 100%; }
+    #products .container .content-wrapper.right .content .content-title, #products .container .content-wrapper.left .content .content-title {
+      font-size: 2.5rem;
+      top: -10rem;
+      position: relative;
+      top: 0;
+      left: 0; }
+  #products .container .content-wrapper.right .content .content-title {
+    right: 0;
+    padding-right: 2rem; }
+
+  .footer .container .wrapper {
+    margin: 0 auto; }
+    .footer .container .wrapper .brand-wrapper {
+      width: 85%;
+      margin-bottom: 4rem; }
+    .footer .container .wrapper .link-wrapper {
+      width: 30%;
+      padding-left: 3rem; }
+
+  #story .container .swiper .navigation {
+    width: 20%; }
+    #story .container .swiper .navigation .swiper-button-next, #story .container .swiper .navigation .swiper-button-prev {
+      display: none; }
+  #story .container .swiper .swiper-slide img {
+    width: 100%;
+    height: 50rem;
+    object-fit: cove; } }
+@media (max-width: 410px) {
+  .footer .container .wrapper {
+    margin: 0 auto; }
+    .footer .container .wrapper .brand-wrapper {
+      width: 95%;
+      margin-bottom: 4rem; }
+    .footer .container .wrapper .link-wrapper {
+      width: 50%;
+      padding-left: 3rem;
+      margin-bottom: 2rem; } }
 
 /*# sourceMappingURL=styles.css.map */

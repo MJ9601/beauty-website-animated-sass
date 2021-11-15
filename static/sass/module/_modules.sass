@@ -12,10 +12,16 @@
   padding: 2rem 1rem
   background-color: transparent
   z-index: 1000
+  +customeTransition(all .4s ease)
+  &.active
+    background: transparentize($dark, .5)
   .container  
     display: flex
     justify-content: space-between
     align-items: center
+    .collapse-key, .collapse-nav
+      display: none
+      opacity: 0
     .right-menu, .left-menu
       padding: 0 .5rem
       .nav-group
@@ -54,6 +60,7 @@
 .btn
   padding: 1rem 3rem
   font-size: 2rem
+  font-weight: 400
   color: $gray
   text-transform: uppercase
   cursor: pointer
@@ -88,10 +95,51 @@
     align-items: center
     img 
       display: block
-      width: 100%
-      height: 100%
+      width: 20rem
+      height: 10rem
       object-fit: contain
-  
+
+
+#story
+  margin: 2rem 0
+  .container
+    .title 
+      font-family: $headerFont
+      font-size: 3rem
+      text-transform: uppercase
+      padding: 2rem 0 3rem 0
+    .swiper
+      position: relative
+      overflow-y: visible
+      .swiper-wrapper
+        .swiper-slide
+          img
+            width: 40rem
+            height: 60rem
+            object-fit: cover
+      .navigation
+        overflow-y: visible
+        width: 10% 
+        position: absolute
+        top: 3rem
+        right: 0
+        display: flex
+        justify-content: end
+        .swiper-button-next, .swiper-button-prev
+          overflow-y: visible
+          z-index: 999
+          background-color: #fff  
+          padding: 3rem 2.4rem
+          color: $dark
+          font-size: 3rem
+          font-weight: 600
+          border-radius: .4rem
+          +customeTransition( all .4s ease)
+          &:hover
+            background-color: $dark
+            opacity: .5
+            color: #fff
+
 
 
 

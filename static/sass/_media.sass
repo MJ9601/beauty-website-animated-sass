@@ -5,10 +5,98 @@
 
 @media (max-width:1178px)
   .navbar
+    &.collapsed
+      background: transparentize($dark, .5)
     .right-menu, .left-menu
       display: none
+      position: relative
+    .container
+      .collapse-key
+        display: block
+        opacity: 1
+        font-size: 3rem
+        cursor: pointer
+        +customeTransition (all .5s ease)
+        &:hover
+          color: lighten(red, 10%)
+      .collapse-nav
+        position: absolute
+        display: block
+        top: -100vh
+        left: 0
+        width: 100vw
+        height: inherit
+        opacity: 1
+        font-size: 3rem
+        margin-top: 6rem
+        background: transparentize($dark, .5)
+        +customeTransition(all .5s ease-in-out)
+        &.active
+          display: block
+          opacity: 1
+          top: 6rem
 
-@media (max-width:633px)
+        .nav-group
+          width: 85%
+          margin: 0 auto
+          padding: 2rem 3rem
+          .nav-item
+            margin-bottom: 1rem
+            .nav-link
+              text-transform: uppercase
+              font-family: $headerFont
+
+
+
+
+
+
+  #products
+    .container
+      .content-wrapper
+        &.left, &.right
+          .content
+            .content-title
+              font-size: 3rem
+              top: -10rem
+
+  #story
+    .container
+      .swiper
+        .navigation
+          width: 13%
+          
+@media (max-width:950px)
+  #story
+    .container
+      .swiper
+        .navigation
+          width: 15% 
+
+
+@media (max-width:888px)
+  #products
+    .container
+      .content-wrapper
+        &.right, &.left
+          .content
+            .content-title
+              font-size: 2.5rem
+              top: -10rem
+        &.right
+          .content
+            .content-body
+              .content-text
+              padding-right: 3rem
+              right: 2rem
+              margin-right: 2rem
+  #story
+    .container
+      .swiper
+        .navigation
+          width: 20% 
+
+@media (max-width:653px)
   #home
     .container  
       width: 100%
@@ -29,5 +117,61 @@
           h1
             text-align: left
 
+  #products
+    .container
+      .content-wrapper
+        &.right, &.left
+          .img-product
+            width: 100%
+            margin-bottom: 2rem
+          .content
+            margin: 2rem 0
+            width: 100%
+            .content-title
+              font-size: 2.5rem
+              top: -10rem
+              position: relative
+              top: 0
+              left: 0
+        &.right
+          .content
+            .content-title
+              right: 0
+              padding-right: 2rem
 
+  .footer
+    .container
+      .wrapper
+        margin: 0 auto
+        .brand-wrapper
+          width: 85%
+          margin-bottom: 4rem
+        .link-wrapper
+          width: 30%
+          padding-left: 3rem
+  #story
+    .container
+      .swiper
+        .navigation
+          width: 20%
+          .swiper-button-next, .swiper-button-prev
+            display: none
+        .swiper-slide
+          img
+            width: 100%
+            height: 50rem
+            object-fit: cove
+@media ( max-width: 410px  )
+  .footer
+    .container
+      .wrapper
+        margin: 0 auto
+        .brand-wrapper
+          width: 95%
+          margin-bottom: 4rem
+        .link-wrapper
+          width: 50%
+          padding-left: 3rem
+          margin-bottom: 2rem
+  
   
